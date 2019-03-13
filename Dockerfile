@@ -39,3 +39,10 @@ USER pptruser
 
 ENTRYPOINT ["dumb-init", "--"]
 CMD ["google-chrome-unstable"]
+
+
+#INSTALL
+# docker build -t puppeteer-chrome-linux .
+# docker run -i --rm --cap-add=SYS_ADMIN \
+#   --name puppeteer-chrome puppeteer-chrome-linux \
+#  node -e "`cat crawler.js`"
